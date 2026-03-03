@@ -67,6 +67,13 @@ class GuardrailConfig(Base):
     enabled: Mapped[bool] = mapped_column(Boolean, default=True)
     config: Mapped[dict | None] = mapped_column(JSONB, nullable=True, default=dict)
 
+    # ── Notification channels ────────────────────────
+    webhook_url: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    notification_channels: Mapped[list | None] = mapped_column(
+        JSONB, nullable=True, default=list,
+        comment='List of channel configs: [{"type": "slack", "webhook_url": "..."}, {"type": "email", "to": "..."}]',
+    )
+
     # ── Timestamps ───────────────────────────────────
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=text("now()")

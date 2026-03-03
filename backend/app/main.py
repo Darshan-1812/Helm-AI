@@ -55,12 +55,14 @@ from app.api.runs import router as runs_router
 from app.api.costs import router as costs_router
 from app.api.evaluations import router as eval_router
 from app.api.guardrails import router as guardrails_router
+from app.api.patterns import router as patterns_router
 
 app.include_router(ingest_router, prefix="/api/v1")
 app.include_router(runs_router, prefix="/api/v1")
 app.include_router(costs_router, prefix="/api/v1")
 app.include_router(eval_router, prefix="/api/v1")
 app.include_router(guardrails_router, prefix="/api/v1")
+app.include_router(patterns_router, prefix="/api/v1")
 
 
 # ── Health Check ─────────────────────────────────────
