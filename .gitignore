@@ -1,0 +1,95 @@
+# ===========================================
+# Agent Control Room — .gitignore
+# ===========================================
+
+# ---- Environment & Secrets ----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+*.whl
+.venv/
+venv/
+env/
+.python-version
+pip-log.txt
+pip-delete-this-directory.txt
+*.manifest
+*.spec
+
+# Coverage & Testing
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# mypy / type-checkers
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+.pyre/
+
+# ---- Node / Next.js ----
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.turbo/
+.vercel/
+
+# ---- IDE & Editors ----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# ---- OS Files ----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- Docker Volumes (local data) ----
+postgres_data/
+redis_data/
+
+# ---- Misc ----
+*.bak
+*.tmp
+*.temp
+*.pid
+*.seed
+*.log
+.eslintcache
